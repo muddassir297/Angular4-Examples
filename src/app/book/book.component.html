@@ -1,0 +1,14 @@
+<table class="table table-inverse">
+  <thead>
+    <th>Book</th>
+    <th>Price</th>
+    <th>Auther</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let book of bookDetails'>
+      <td>{{book.bookName}}</td>
+      <td>{{book.bookprice}}</td>
+      <td>{{book.bookAuther}}</td>
+    </tr>
+  </tbody>
+</table>

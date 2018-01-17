@@ -1,0 +1,17 @@
+<button (click) = "getRatings()">Get Ratings</button>
+Date: {{myDate | date:'fullDate'}}
+<hr>
+<div>
+  <ul>
+    <li *ngFor="let prod of prodDetails">
+      {{prod.prodName | uppercase}} -- {{prod.prodRating}} -- {{prod.prodPrice | currency:'INR'}}
+    </li>
+  </ul>
+</div>
+<hr>
+<div>
+  Enter Number: <input type="text" [(ngModel)]=input/> <br/>
+  Enter Power: <input type="text" [(ngModel)]=arg /> <br/>
+
+  Powered: {{input | power:arg}}
+</div>

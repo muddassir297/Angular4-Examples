@@ -1,0 +1,40 @@
+
+<app-book></app-book>
+<hr>
+<h2>Product ID:{{productObj.prodId}} <br>
+  Product Name: {{productObj.prodName}} <br>
+  Product Price: {{productObj.prodPrice}}
+</h2>
+<hr> 
+<app-post></app-post>
+<hr>
+<!-- 2 Way Binding -->
+
+
+<form action="">
+  Enter product ID: <input name = "productObj.prodId" type="text" [(ngModel)] ="productObj.prodId"/> <br>
+  Enter product Name: <input name = "productObj.prodName" type="text" [(ngModel)] ="productObj.prodName"/> <br>
+  Enter product Name: <input name = "productObj.prodPrice" type="text" [(ngModel)] ="productObj.prodPrice"/>
+
+  <button>Product Details</button>
+  <button (click) = "clearDetails()">Reset</button>
+
+  <app-rating-child [pName] = "productObj.prodName" [productObj] = "productObj"></app-rating-child>
+</form>
+
+<hr>
+<app-rating></app-rating>
+<hr>
+<span (mouseover) = "loadProducts()">loading products...</span>
+
+<!--Rendering the child component with property as productObj -->
+  <app-rating-child *ngFor='let productObj of productArray' [productObj] = 'productObj'></app-rating-child>
+ <hr>
+ <div appShadow>
+    hey shadow
+</div> 
+
+<hr>
+
+
+

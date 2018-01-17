@@ -1,0 +1,7 @@
+[
+    {"bookName": "Angular 4", "bookprice": 500, "bookAuther": "Google"},
+    {"bookName": "node", "bookprice": 400, "bookAuther": "Kathy"},
+    {"bookName": "JSON", "bookprice": 350, "bookAuther": "Berkey"},
+    {"bookName": "MEAN", "bookprice": 200, "bookAuther": "Sherly"},
+    {"bookName": "Technology", "bookprice": 1000, "bookAuther": "Muddassir"}
+]

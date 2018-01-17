@@ -1,0 +1,20 @@
+<!--<ul>
+  <li *ngFor="let post of postArray">
+    {{post.id}}
+    {{post.title}}
+    {{post.body}}
+  </li>
+</ul>-->
+
+<h2> With Query Parameter</h2>
+
+Enter Post Id: <input type="text" #pid/><br>
+<button (click) = "getSpecificPost(pid.value)">Get Post by ID</button>
+
+<div *ngIf="!flag; else temp1">
+  {{postDataById.id}}
+  {{postDataById.title}}
+  {{postDataById.body}}
+</div>
+
+<ng-template #temp1>No Data Found</ng-template>

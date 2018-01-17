@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ <h1>{{title}}</h1>
+ Email: {{email}}
+ <hr>
+ <h1>
+    City: {{address.city}}  <br/>
+    State: {{address.state}}<br/>
+    country: {{address.country}}
+ </h1>
+<hr>
+<button (click)='playHobby()'>{{flag?'Hide Hobbies':'Show Hobbies'}}</button>
+<div *ngIf='flag'>
+    <ul>
+     <li *ngFor='let hobby of hobbies'>{{hobby}}</li>
+ </ul>
+</div>
+<hr>
+<!--Adding Hobbies--> 
+Enter Hobby: <input type="text" #hob> <br>
+<button (click)= 'addHobby(hob.value)' class='btn btn primary'>Add Hobby</button>
+<hr>
+<img [src]='imagepath' alt="" width="100" heigh="100" />
+<hr>
+
+<app-product></app-product>
